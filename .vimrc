@@ -28,6 +28,7 @@ call dein#add('joshdick/airline-onedark.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('Yggdroot/indentLine')
 call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('rking/ag.vim')
 call dein#add('thinca/vim-quickrun')
 call dein#add('tyru/caw.vim')
 call dein#add('tyru/open-browser.vim')
@@ -133,6 +134,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>t gt
 nnoremap <Leader>T gT
+nnoremap <Leader>F :Ag<Space>
 nnoremap <Leader><Tab> <C-w>w
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 inoremap jj <ESC>
@@ -198,3 +200,8 @@ map <Leader>/ <Plug>(caw:zeropos:toggle)
 " vim-gitgutter
 
 let g:gitgutter_map_keys = 0
+
+" ag.vim
+
+let g:ctrlp_use_caching=0
+let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
