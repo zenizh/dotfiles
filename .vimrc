@@ -132,8 +132,7 @@ noremap <Leader>h ^
 noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>t gt
-nnoremap <Leader>T gT
+nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>F :Ag<Space>
 nnoremap <Leader><Tab> <C-w>w
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
