@@ -204,3 +204,21 @@ let g:gitgutter_map_keys = 0
 
 let g:ctrlp_use_caching=0
 let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
+
+"
+" Bug fixes
+"
+
+" vim-multiple-cursors
+
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
