@@ -43,6 +43,7 @@ call dein#add('Shougo/neosnippet-snippets', { 'on_i': 1 })
 call dein#add('tpope/vim-endwise',          { 'on_i': 1 })
 call dein#add('Townk/vim-autoclose',        { 'on_i': 1 })
 
+call dein#add('mxw/vim-jsx',                { 'on_ft': 'javascript' })
 call dein#add('osyo-manga/vim-monster',     { 'on_ft': 'ruby' })
 call dein#add('todesking/ruby_hl_lvar.vim', { 'on_ft': 'ruby' })
 
@@ -204,6 +205,10 @@ let g:gitgutter_map_keys = 0
 
 let g:ctrlp_use_caching=0
 let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
+
+" vim-jsx
+
+let g:jsx_ext_required = 0
 
 "
 " Bug fixes
