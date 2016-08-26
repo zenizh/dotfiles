@@ -43,6 +43,7 @@ call dein#add('Shougo/neosnippet-snippets', { 'on_i': 1 })
 call dein#add('tpope/vim-endwise',          { 'on_i': 1 })
 call dein#add('Townk/vim-autoclose',        { 'on_i': 1 })
 
+call dein#add('pangloss/vim-javascript',    { 'on_ft': 'javascript' })
 call dein#add('mxw/vim-jsx',                { 'on_ft': 'javascript' })
 call dein#add('osyo-manga/vim-monster',     { 'on_ft': 'ruby' })
 call dein#add('todesking/ruby_hl_lvar.vim', { 'on_ft': 'ruby' })
