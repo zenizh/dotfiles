@@ -28,3 +28,5 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "one-dark-ui":
+    tabSizing: "Even"
