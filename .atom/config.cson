@@ -1,0 +1,30 @@
+"*":
+  core:
+    disabledPackages: [
+      "language-gfm"
+      "welcome"
+      "background-tips"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 11
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "0abad9b8-ab27-7020-847a-295e8d12ad94"
+  "file-icons":
+    coloured: false
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
