@@ -7,6 +7,10 @@ do
   ln -fnsv $HOME/dotfiles/$file $HOME/$file
 done
 
+if [ ! -d ~/.atom/packages ]; then
+  apm install --packages-file ~/.atom/packages.txt
+fi
+
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 fi
