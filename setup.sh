@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=(.tmux .tmux.conf .vimrc .zshrc)
+DOTFILES=(.atom .tmux .tmux.conf .vimrc .zshrc)
 
 for file in ${DOTFILES[@]}
 do
