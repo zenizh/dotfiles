@@ -110,41 +110,18 @@ zstyle ':completion:*:options' description 'yes'
 #
 
 POWERLINE_SEPARATOR=$'\ue0b2'
-POWERLINE_SEPARATOR_LINE=$'\ue0b3'
 POWERLINE_BRANCH=$'\ue0a0'
 
-VI_MODE_INSERT='%F{4}%K{0}'$POWERLINE_SEPARATOR'%k%f%F{0}%K{4}%B INSERT %b%k%f'
-VI_MODE_NORMAL='%F{2}%K{0}'$POWERLINE_SEPARATOR'%k%f%F{0}%K{2}%B NORMAL %b%k%f'
-
-zstyle ':vcs_info:*' formats $POWERLINE_BRANCH' %b '$POWERLINE_SEPARATOR_LINE' '
-
-function precmd_vi_mode() {
-  VI_MODE=$VI_MODE_INSERT
-}
+zstyle ':vcs_info:*' formats '%F{7}%K{8} '$POWERLINE_BRANCH' %b %k%f'
 
 function precmd_vcs_info() {
   vcs_info
 }
 
-function zle-keymap-select {
-  case $KEYMAP in
-    main|viins)
-      VI_MODE=$VI_MODE_INSERT
-      ;;
-    vicmd)
-      VI_MODE=$VI_MODE_NORMAL
-      ;;
-  esac
-  zle reset-prompt
-}
-
-zle -N zle-keymap-select
-
-add-zsh-hook precmd precmd_vi_mode
 add-zsh-hook precmd precmd_vcs_info
 
-PROMPT='%F{2}❯%f '
-RPROMPT='%F{8}${vcs_info_msg_0_}%c%f ${VI_MODE}'
+PROMPT='%F{2}%%%f '
+RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWERLINE_SEPARATOR'%k%f%F{0}%K{2} %c %k%f'
 
 #
 # Other settings
