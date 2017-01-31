@@ -1,9 +1,25 @@
 "*":
+  "autoclose-html":
+    forceInline: [
+      "title"
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5"
+      "h6"
+      "li"
+      "option"
+      "th"
+      "td"
+    ]
   core:
     disabledPackages: [
-      "language-gfm"
       "welcome"
       "background-tips"
+      "linter"
+      "deprecation-cop"
+      "language-gfm"
     ]
     telemetryConsent: "no"
   editor:
@@ -14,6 +30,8 @@
     userId: "0abad9b8-ab27-7020-847a-295e8d12ad94"
   "file-icons":
     coloured: false
+  "markdown-preview":
+    liveUpdate: false
   minimap:
     plugins:
       cursorline: true
