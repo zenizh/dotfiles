@@ -1,0 +1,7 @@
+[user]
+	name = kami-zh
+	email = hiroki.zenigami@gmail.com
+[ghq]
+	root = /Users/kami/.go/src
+[http]
+	sslVerify = false

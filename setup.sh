@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=(.tmux .tmux.conf .vimrc .zshrc)
+DOTFILES=(.gitconfig .tmux .tmux.conf .vimrc .zshrc)
 
 if [ ! `which brew` ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
