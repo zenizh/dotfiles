@@ -1,15 +1,15 @@
 #!/bin/bash
 
-DOTFILES=(.atom .tmux .tmux.conf .vimrc .zshrc)
+DOTFILES=(.tmux .tmux.conf .vimrc .zshrc)
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew bundle
 
 for file in ${DOTFILES[@]}
 do
   ln -fnsv $HOME/dotfiles/$file $HOME/$file
 done
-
-if [ ! -d ~/.atom/packages ]; then
-  apm install --packages-file ~/.atom/packages.txt
-fi
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm

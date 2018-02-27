@@ -6,7 +6,7 @@ source ~/.zplug/init.zsh
 
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-syntax-highlighting', nice:10
+zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug 'mollifier/anyframe'
 
 if ! zplug check --verbose; then
@@ -127,8 +127,33 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 # Other settings
 #
 
+export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/Cellar/vim/8.0.0512/bin/:$PATH"
+
+# Go
+
+export GOPATH="$HOME/.go"
+export PATH="$PATH:$GOPATH/bin"
+
 # rbenv
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-
 eval "$(rbenv init - zsh)"
+
+# pyenv
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
+# nodenv
+
+# export PATH=$HOME/.nodenv/shims:$PATH
+# eval "$(nodenv init -)"
+
+# jenv
+
+# if which jenv > /dev/null; then
+#   export JENV_ROOT=/usr/local/var/jenv
+#   eval "$(jenv init -)"
+# fi
