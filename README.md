@@ -14,3 +14,4 @@ $ ./setup.sh
 
 - [ ] Install Xcode before executing `setup.sh`
 - [ ] Patch font for Powerline
+- [ ] Sync settings for Atom
