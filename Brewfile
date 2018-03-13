@@ -44,7 +44,6 @@ cask "osxfuse"
 cask "postgres"
 cask "tunnelblick"
 cask "vagrant"
-cask "virtualbox"
 
 mas "Bear", id: 1091189122
 mas "Keynote", id: 409183694
