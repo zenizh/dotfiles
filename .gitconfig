@@ -1,7 +1,12 @@
 [user]
-	name = kami-zh
+	name = zenizh
 	email = hiroki.zenigami@gmail.com
 [ghq]
 	root = /Users/hiroki.zenigami/.go/src
 [http]
 	sslVerify = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

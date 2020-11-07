@@ -1,2 +1,6 @@
+.config/fish/completions
+.config/fish/conf.d
+.config/fish/functions
+.config/fish/fish_variables
 .tmux/plugins
 .tmux/resurrect

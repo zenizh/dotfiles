@@ -5,7 +5,7 @@ My dotfiles.
 ## Setup
 
 ```
-$ git clone git@github.com:kami-zh/dotfiles.git ~/
+$ git clone git@github.com:zenizh/dotfiles.git ~/
 $ cd ~/dotfiles
 $ ./setup.sh
 ```
@@ -13,5 +13,3 @@ $ ./setup.sh
 ## ToDo
 
 - [ ] Install Xcode before executing `setup.sh`
-- [ ] Patch font for Powerline
-- [ ] Sync settings for Atom

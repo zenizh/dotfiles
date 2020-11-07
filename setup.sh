@@ -1,22 +1,17 @@
 #!/bin/bash
 
-DOTFILES=(.gitconfig .tmux .tmux.conf .vimrc .zshrc)
-
 if [ ! `which brew` ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 brew bundle
 
-for file in ${DOTFILES[@]}
-do
-  ln -fnsv $HOME/dotfiles/$file $HOME/$file
-done
+ln -fnsv $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+ln -fnsv $HOME/dotfiles/.tmux $HOME/.tmux
+ln -fnsv $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -fnsv $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -fnsv $HOME/dotfiles/.config/fish $HOME/.config/fish
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
-fi
-
-if [ ! -d ~/.zplug ]; then
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi

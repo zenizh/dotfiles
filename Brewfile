@@ -1,62 +1,67 @@
-tap "homebrew/core"
-tap "homebrew/bundle"
 tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "stripe/stripe-cli"
+tap "stripe/stripe-mock"
 tap "thoughtbot/formulae"
 
+brew "awscli"
 brew "chromedriver"
+brew "dep"
+brew "fish"
 brew "fontforge"
 brew "ghq"
 brew "git"
 brew "go"
 brew "imagemagick"
-brew "jq"
+brew "libxml2"
 brew "libxslt"
 brew "mas"
 brew "mysql"
-brew "openssl"
+brew "node"
 brew "peco"
-brew "readline"
 brew "postgresql"
 brew "pwgen"
-brew "rbenv"
-brew "reattach-to-user-namespace"
 brew "ruby-build"
+brew "rbenv"
+brew "readline"
+brew "reattach-to-user-namespace"
+brew "redis", restart_service: true
 brew "sshfs"
+brew "starship"
 brew "terraform"
 brew "tig"
 brew "tmux"
 brew "tree"
+brew "watch"
 brew "wget"
 brew "yarn"
-brew "zsh"
 brew "heroku/brew/heroku"
+brew "stripe/stripe-cli/stripe"
+brew "stripe/stripe-mock/stripe-mock"
 brew "thoughtbot/formulae/gitsh"
 
-cask "atom"
-cask "clipy"
 cask "docker"
-cask "github"
+cask "font-menlo-for-powerline"
 cask "google-chrome"
-cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "imagealpha"
-cask "insomnia"
-cask "licecap"
+cask "ngrok"
 cask "osxfuse"
-cask "parallels"
 cask "postgres"
-cask "tunnelblick"
-cask "vagrant"
 
 mas "Bear", id: 1091189122
+mas "CotEditor", id: 1024640650
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
-mas "MindNode Pro", id: 402398561
+mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
-mas "Trello", id: 1278508951
-mas "Wunderlist", id: 410628904
+mas "Twitter", id: 1482454543
 mas "Xcode", id: 497799835
